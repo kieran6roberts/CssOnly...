@@ -6,19 +6,28 @@
     display: flex;
     font-size: v.$font-md;
     font-family: v.$font-style;
-    padding: 1vw;
+    padding: 2vh 2vw;
 
     &__brand {
         color: v.$color-light;
+        display: block;
         font-size: 1.2em;
         font-weight: 700;
+        margin-right: auto;
     }
 
     &__items {
-        margin-left: auto;
+        display: none;
+        visibility: hidden;
+
+        @media only screen and (min-width: 768px) {
+            display: grid;
+            grid-auto-flow: column;
+            visibility: visible;
+        }
     }
 
-    & > ul {
+    & > .nav__dropdown {
         display: grid;
         grid-auto-flow: column;
     }
@@ -88,5 +97,26 @@
         padding: 0.2rem;
         visibility: hidden;
         white-space: nowrap;
+    }
+
+    &__mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 1rem;
+        width: 1.8rem;
+        visibility: visible;
+
+        @media only screen and (min-width: 768px) {
+            display: none;
+            visibility: hidden;
+        }
+    }
+
+    &__mobile--span {
+        background-color: v.$color-light;
+        display: block;
+        height: 0.1rem;
+        width: 100%;
     }
 }
