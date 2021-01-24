@@ -6,9 +6,13 @@
   "author": "Kieran Roberts",
   "license": "MIT",
   "scripts": {
+    "start": "snowpack dev",
+    "build": "snowpack build",
     "sass": "sass --watch scss/main.scss css/main.css"
   },
   "devDependencies": {
-    "sass": "^1.32.5"
-  }
+    "sass": "^1.32.5",
+    "snowpack": "^3.0.11"
+  },
+  "dependencies": {}
 }
