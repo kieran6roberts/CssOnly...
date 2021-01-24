@@ -5,6 +5,9 @@
   "main": "index.js",
   "author": "Kieran Roberts",
   "license": "MIT",
+  "scripts": {
+    "sass": "sass --watch scss/main.scss css/main.css"
+  },
   "devDependencies": {
     "sass": "^1.32.5"
   }
