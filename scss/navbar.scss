@@ -1,0 +1,79 @@
+@use "variables" as v;
+
+.nav {
+    align-items: center;
+    background-color: v.$color-primary;
+    display: flex;
+    font-size: v.$font-md;
+    font-family: v.$font-style;
+    padding: 1vw;
+
+    &__brand {
+        color: v.$color-light;
+        font-size: 1.2em;
+        font-weight: 700;
+    }
+
+    &__items {
+        margin-left: auto;
+    }
+
+    & > ul {
+        display: grid;
+        grid-auto-flow: column;
+    }
+
+    & > ul > li > 
+    a,
+    button {
+        color: v.$color-light;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    &__items > li {
+        margin: 0 3rem;
+        position: relative;
+
+        &:hover,
+        &:focus-within {
+            .nav__dropdown {
+                opacity: 1;
+                transform: translateX(-50%);
+            }
+
+            .nav__dropdown-link {
+                visibility: visible;
+            }
+        }
+    }
+
+    &__dropdown {
+        background-color: v.$color-light;
+        box-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.4);
+        border-radius: 0.4rem;
+        color: v.$color-dark;
+        font-size: 0.9em;
+        min-width: 10rem;
+        opacity: 0;
+        padding: 1vh 1.5vw;
+        position: absolute;
+        left: 50%;
+        text-align: center;
+        text-transform: capitalize;
+        transform: translateX(-50%);
+        transform-origin: top center;
+        transition: all 180ms ease-in-out;
+    }
+
+    &__dropdown > li {
+        margin-bottom: 0.4rem;
+    }
+
+    &__dropdown > li > a {
+        color: v.$color-dark;
+        padding: 0.2rem;
+        visibility: hidden;
+        white-space: nowrap;
+    }
+}
