@@ -10,5 +10,100 @@
 </head>
 <body>
     <!-- Css Only Navigation with dropdown links and burger menu -->
+    <nav 
+    aria-label="main-navigation"
+    class="nav"
+    >
+        <a 
+        class="nav__brand"
+        href="/"
+        >
+            CssOnly...
+        </a>
+        <ul class="nav__items">
+            <li class="nav__item">
+                <a 
+                class="nav__item"
+                href=""
+                >
+                    hover over me
+                </a>
+            </li>
+            <li class="nav__item">
+                <button
+                class="nav__item"
+                >
+                    projects
+                </button>
+                <ul 
+                class="nav__dropdown"
+                id="projects-dropdown">
+                    <li class="nav__dropdown-item">
+                        <a 
+                        class="nav__dropdown-link"
+                        href="#">
+                            e-commerce
+                        </a>
+                    </li>
+                    <li class="nav__dropdown-item">
+                        <a 
+                        class="nav__dropdown-link"
+                        href="#">
+                            social media app
+                        </a>
+                    </li>
+                    <li class="nav__dropdown-item">
+                        <a 
+                        class="nav__dropdown-link"
+                        href="#">
+                            quiz app
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav__item">
+                <button 
+                aria-controls="skills-dropdown"
+                class="nav__item"
+                >
+                    skills
+                </button>
+                <ul 
+                class="nav__dropdown"
+                id="skills-dropdown">
+                    <li class="nav__dropdown-item">
+                        <a 
+                        class="nav__dropdown-link"
+                        href="#">
+                            problem solving
+                        </a>
+                    </li>
+                    <li class="nav__dropdown-item">
+                        <a 
+                        class="nav__dropdown-link"
+                        href="#">
+                            communication
+                        </a>
+                    </li>
+                    <li class="nav__dropdown-item">
+                        <a 
+                        class="nav__dropdown-link"
+                        href="#">
+                            leadership
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <button 
+        aria-label="mobile-navigation"
+        aria-expanded="false"
+        class="nav__mobile"
+        >
+            <span class="nav__mobile--span"></span>
+            <span class="nav__mobile--span"></span>
+            <span class="nav__mobile--span"></span>
+        </button>
+    </nav>
 </body>
 </html>
