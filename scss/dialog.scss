@@ -1,0 +1,61 @@
+@use "variables" as v;
+
+.open-dialog {
+    border: 1px solid v.$color-primary;
+    border-radius: 0.4rem;
+    color: v.$color-dark;
+    display: inline-block;
+    margin: 1rem 2vw;
+    padding: 0.3rem 0.6rem;
+    text-transform: uppercase;
+}
+
+.overlay {
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: all 150ms ease;
+    width: 100%;
+    visibility: hidden;
+
+    &:target {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.dialog__body {
+    background-color: v.$color-light;
+    border: 2px solid v.$color-primary;
+    border-radius: 0.4rem;
+    max-width: 600px;
+    margin: auto;
+    padding: 1.5rem;
+    position: relative;
+
+    &-close {
+        color: v.$color-primary;
+        position: absolute;
+        padding: 0 0.5rem;
+        top: 5%;
+        right: 5%;
+    }
+
+    &-header {
+        margin-bottom: 1rem;
+    }
+
+    .dialog__content {
+        font-size: v.$font-sm;
+
+        &-description {
+            margin-bottom: 1rem;
+        }
+    }
+}

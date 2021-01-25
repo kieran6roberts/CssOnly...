@@ -1,3 +1,19 @@
 @use "resets";
 @use "nav";
 @use "sidebar";
+@use "dialog";
+@use "variables" as v;
+
+.main {
+    padding-left: 2vw;
+
+    &__header {
+        max-width: 600px;
+        padding: 2rem 0;
+        text-transform: uppercase;
+    }
+
+    &__header > abbr {
+        color: v.$color-primary
+    }
+}
