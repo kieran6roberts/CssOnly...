@@ -8,6 +8,7 @@
 
 html {
   scroll-behavior: smooth;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 body {
@@ -50,7 +51,7 @@ button {
   background-color: #e74c3c;
   display: flex;
   font-size: clamp(1rem, 1.3vw, 1.7rem);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  height: 10vh;
   padding: 2vh 2vw;
 }
 .nav__brand {
@@ -132,8 +133,8 @@ button {
 .nav__mobile {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 1rem;
+  justify-content: space-evenly;
+  height: 1.8rem;
   position: relative;
   width: 1.8rem;
   visibility: visible;
@@ -158,6 +159,42 @@ button {
   position: absolute;
   opacity: 0;
   width: 100%;
+}
+.nav__mobile--check:checked ~ .sidebar {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.sidebar {
+  background-color: #fff;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  top: 10vh;
+  transform: translateX(-150%);
+  transition: transform 300ms ease-in-out, opacity 300ms ease 150ms;
+  width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+}
+.sidebar__items {
+  text-align: center;
+}
+.sidebar__item {
+  margin: 2rem 0;
+}
+.sidebar__item > a {
+  border: 2px solid #e74c3c;
+  color: #e74c3c;
+  display: block;
+  font-size: clamp(1.4rem, 2vw, 2rem);
+  margin: auto;
+  text-transform: uppercase;
+  padding: 1rem;
+  width: 10rem;
 }
 
 /*# sourceMappingURL=main.css.map */
