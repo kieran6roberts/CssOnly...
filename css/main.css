@@ -201,10 +201,11 @@ button {
   border: 1px solid #e74c3c;
   border-radius: 0.4rem;
   color: #333;
-  display: inline-block;
-  margin: 1rem 2vw;
+  display: block;
+  margin: 1rem auto;
   padding: 0.3rem 0.6rem;
   text-transform: uppercase;
+  width: max-content;
 }
 
 .overlay {
@@ -253,15 +254,57 @@ button {
 }
 
 .main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding-left: 2vw;
 }
 .main__header {
   max-width: 600px;
   padding: 2rem 0;
+  text-align: center;
   text-transform: uppercase;
 }
 .main__header > abbr {
   color: #e74c3c;
+}
+.main .tooltip {
+  border-bottom: 1px solid #e74c3c;
+  display: inline-block;
+  margin-bottom: 2rem;
+  position: relative;
+  text-align: center;
+  width: 10rem;
+}
+.main .tooltip:before {
+  border: 1px solid #e74c3c;
+  border-radius: 0.4rem;
+  content: attr(data-text);
+  display: none;
+  font-size: clamp(0.8rem, 1vw, 1.4rem);
+  left: 100%;
+  margin-left: 1rem;
+  padding: 0.2rem 0.6rem;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10rem;
+}
+.main .tooltip:after {
+  border: 10px solid #e74c3c;
+  border-color: transparent #e74c3c transparent transparent;
+  content: "";
+  display: none;
+  margin-left: -0.2rem;
+  left: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.main .tooltip:hover:before, .main .tooltip:hover:after {
+  display: block;
 }
 
 /*# sourceMappingURL=main.css.map */

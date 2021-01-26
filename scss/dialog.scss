@@ -4,10 +4,11 @@
     border: 1px solid v.$color-primary;
     border-radius: 0.4rem;
     color: v.$color-dark;
-    display: inline-block;
-    margin: 1rem 2vw;
+    display: block;
+    margin: 1rem auto;
     padding: 0.3rem 0.6rem;
     text-transform: uppercase;
+    width: max-content;
 }
 
 .overlay {
